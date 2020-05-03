@@ -1,0 +1,132 @@
+
+.PageBody {
+    margin-top: 90px;
+}
+.Navbar {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 0rem 1rem;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.TopNavbar {
+    display: flex;
+}
+
+.Logo {
+    font-weight: 600;
+}
+
+.NavUl {
+    display: flex;
+    list-style: none;
+    margin-right: 1rem;
+}
+.NavbarLink {
+    color: #fff;
+}
+
+.NavLi a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.NavLi a:hover {
+    text-decoration: underline;
+    background-color: black;
+}
+
+.PageWrapper {
+    margin-top: 7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.ToggleBar {
+    background-color: #fff;
+    height: 0.15rem;
+    margin: 0.4rem 0;
+    display: block;
+}
+
+.ToggleButton {
+    width: 1.5rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    display: none;
+}
+
+.MainHeaderBrand {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.SideNavbar {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    margin-top: 8rem;
+    color: white;
+    /* display: none; */
+}
+.Open {
+display: block;
+}
+.Close{
+display: none;
+}
+.SideNavUl {
+    list-style: none;
+    padding-top: 1rem;
+}
+.SideNavLi {
+    margin: 0.2rem;
+    padding: 0.2rem;
+    text-align: left;
+    
+}
+.SideNavLi a{
+    color: white;
+    text-decoration: none;
+    width: 100%;display: block;
+    font-size: 1.0rem;
+    padding: 0.5rem;
+}
+.SideNavContent:hover, .SideNavContent:active, .SideNavContent.active {
+    background-color: #000;
+    padding: 0.5rem;
+}
+
+@media (max-width: 850px) {
+    .TopNavbar {
+        display: flex;
+    }
+    .ToggleButton {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    .TopNavbar {
+        display: none;
+    }
+    .ToggleButton {
+        display: inline-block;
+    }
+}

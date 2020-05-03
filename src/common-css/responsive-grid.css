@@ -1,0 +1,143 @@
+
+.responsiveDisplayHover {
+    display: none
+}
+
+.responsiveContainer:after, .responsiveContainer:before, .responsiveRow:after, .responsiveRow:before {
+    content: "";
+    display: table;
+    clear: both
+}
+.responsiveContainer {
+    padding: 0.01em 16px
+}
+
+.responsiveCol {
+    float: left;
+    width: 100%
+}
+.responsiveCol.s1 {
+    width: 8.33333%
+}
+
+.responsiveCol.s2 {
+    width: 16.66666%
+}
+
+.responsiveCol.s3 {
+    width: 24.99999%
+}
+
+.responsiveCol.s4 {
+    width: 33.33333%
+}
+
+.responsiveCol.s5 {
+    width: 41.66666%
+}
+
+.responsiveCol.s6 {
+    width: 49.99999%
+}
+
+.responsiveCol.s7 {
+    width: 58.33333%
+}
+
+.responsiveCol.s8 {
+    width: 66.66666%
+}
+
+.responsiveCol.s9 {
+    width: 74.99999%
+}
+
+.responsiveCol.s10 {
+    width: 83.33333%
+}
+
+.responsiveCol.s11 {
+    width: 91.66666%
+}
+
+.responsiveCol.s12 {
+    width: 99.99999%
+}
+
+@media (min-width:601px) {
+    .responsiveCol.m1 {
+        width: 8.33333%
+    }
+    .responsiveCol.m2 {
+        width: 16.66666%
+    }
+    .responsiveCol.m3, .responsiveQuarter {
+        width: 24.99999%
+    }
+    .responsiveCol.m4, .responsiveThird {
+        width: 33.33333%
+    }
+    .responsiveCol.m5 {
+        width: 41.66666%
+    }
+    .responsiveCol.m6, .responsiveHalf {
+        width: 49.99999%
+    }
+    .responsiveCol.m7 {
+        width: 58.33333%
+    }
+    .responsiveCol.m8, .responsiveTwothird {
+        width: 66.66666%
+    }
+    .responsiveCol.m9, .responsiveThreequarter {
+        width: 74.99999%
+    }
+    .responsiveCol.m10 {
+        width: 83.33333%
+    }
+    .responsiveCol.m11 {
+        width: 91.66666%
+    }
+    .responsiveCol.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width:993px) {
+    .responsiveCol.l1 {
+        width: 8.33333%
+    }
+    .responsiveCol.l2 {
+        width: 16.66666%
+    }
+    .responsiveCol.l3 {
+        width: 24.99999%
+    }
+    .responsiveCol.l4 {
+        width: 33.33333%
+    }
+    .responsiveCol.l5 {
+        width: 41.66666%
+    }
+    .responsiveCol.l6 {
+        width: 49.99999%
+    }
+    .responsiveCol.l7 {
+        width: 58.33333%
+    }
+    .responsiveCol.l8 {
+        width: 66.66666%
+    }
+    .responsiveCol.l9 {
+        width: 74.99999%
+    }
+    .responsiveCol.l10 {
+        width: 83.33333%
+    }
+    .responsiveCol.l11 {
+        width: 91.66666%
+    }
+    .responsiveCol.l12 {
+        width: 99.99999%
+    }
+}

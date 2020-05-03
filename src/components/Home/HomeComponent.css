@@ -1,0 +1,14 @@
+.ContentWrapper {
+    display: flex;
+    flex-wrap: row wrap;
+    margin: auto;
+    justify-content: center;
+}
+.Content {
+    padding: 1rem;
+    cursor: pointer;
+}
+.Content:hover, .Content:active, .Content.active {
+    background-color: #000;
+    padding: 1rem;
+}
