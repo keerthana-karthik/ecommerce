@@ -1,0 +1,7 @@
+export const SET_ALL_ITEMS = 'SET_ALL_ITEMS';
+export const ADD_ITEM = 'ADD_ITEM';
+export const UPDATE_ITEM = 'UPDATE_ITEM'; 
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const FETCH_ITEMS_FAILED = 'FETCH_ITEMS_FAILED';
+
+export const SET_SELECTED_ITEMS = "SET_SELECTED_ITEMS";

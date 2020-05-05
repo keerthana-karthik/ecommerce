@@ -1,0 +1,40 @@
+import * as Actions from "../actions/actionTypes";
+import { updateStateObject } from "../helper";
+const initialState = {
+    dresses: []
+}
+const setAllItems = (state, action) => {
+    return updateStateObject(state, {
+        dresses : [...action.dresses]
+    });
+}
+const fetchItemsFailed = (state, action) => {
+    return updateStateObject( state, { error: true } );
+};
+const addItem = (state, action) => {
+
+}
+const updateItem = (state, action) => {
+
+}
+const removeItem = (state, action) => {
+
+}
+
+const dressManageReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case Actions.SET_ALL_ITEMS:
+            return setAllItems(state, action);
+        case Actions.ADD_ITEM:
+            return addItem(state, action);
+        case Actions.UPDATE_ITEM:
+            return updateItem(state, action);
+        case Actions.REMOVE_ITEM:
+            return removeItem(state, action);
+        case Actions.FETCH_ITEMS_FAILED:
+            return fetchItemsFailed(state, action);
+    }
+    return state;
+}
+
+export default dressManageReducer;
