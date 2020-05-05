@@ -1,8 +1,13 @@
 {
-    "posts": [
+    "dresses": [
       {
         "id": 1,
-        "title": "hello"
+        "category": "salwar",
+        "material": "Soft Rayon Cotton",
+        "type": "Kurtis Plazzo Set",
+        "imgurl": "",
+        "price" : "899",
+        "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
       }
     ],
     "profile": {

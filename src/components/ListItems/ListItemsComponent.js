@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 // import indexClasses from "./ListItemsComponent.css";
+import axios from "axios";
 import indexClasses from "../../index.css";
 
 class ListItemsComponent extends Component {
-
+    componentDidMount() {
+        axios.get("").then(response => {
+            console.log(response);
+        });
+    }
     render() {
         return (
             <div className={[indexClasses.responsiveContainer, indexClasses.textLeft].join(" ")}>
