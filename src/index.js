@@ -7,15 +7,15 @@ import './index.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 import dressManageReducer from './store/reducers/dressManageReducer';
-import orderManageReducers from './store/reducers/orderManageReducers';
+import orderManageReducer from './store/reducers/orderManageReducer';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    dresses: dressManageReducer,
-    order: orderManageReducers
+    dressManageReducer: dressManageReducer,
+    orderManageReducer: orderManageReducer
 });
 const store = createStore(rootReducer);
 // const store = createStore(rootReducer, composeEnhancers(

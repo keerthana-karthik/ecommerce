@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import * as actions from "../../store/actions/index";
+import { connect } from 'react-redux';
 import indexclasses from "../../index.css";
 import homeclasses from "./HomeComponent.css";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
@@ -117,5 +119,16 @@ class HomeComponent extends Component {
     );
   }
 }
-
-export default withRouter(props => <HomeComponent {...props} />);
+const mapStateToProps = state => {
+  return {
+      dressesArray: state.dressManageReducer.dresses,
+      selecteddressesArray: state.orderManageReducer.selectedDresses
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+      onInitItems: (items) => dispatch(actions.initItems(items)),
+      setSelectedItems: (items) => dispatch(actions.setSelectedItems(items))
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(props => <HomeComponent {...props} />));

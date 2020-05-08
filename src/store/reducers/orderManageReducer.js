@@ -5,15 +5,15 @@ const initialState = {
 }
 const setSelectedItems = (state, action) => {
     return updateStateObject(state, {
-        dresses : [...action.dresses]
+        selectedDresses : [...action.dresses]
     });
 }
-const orderManageReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case Actions.SET_SELECTED_ITEMS:
             return setSelectedItems(state, action);
+        default: return state;
     }
-    return state;
 }
 
-export default orderManageReducer;
+export default reducer;

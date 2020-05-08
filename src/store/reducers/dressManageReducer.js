@@ -3,6 +3,7 @@ import { updateStateObject } from "../helper";
 const initialState = {
     dresses: []
 }
+
 const setAllItems = (state, action) => {
     return updateStateObject(state, {
         dresses : [...action.dresses]
@@ -21,7 +22,7 @@ const removeItem = (state, action) => {
 
 }
 
-const dressManageReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case Actions.SET_ALL_ITEMS:
             return setAllItems(state, action);
@@ -33,8 +34,8 @@ const dressManageReducer = (state = initialState, action) => {
             return removeItem(state, action);
         case Actions.FETCH_ITEMS_FAILED:
             return fetchItemsFailed(state, action);
+        default: return state;
     }
-    return state;
 }
 
-export default dressManageReducer;
+export default reducer;
