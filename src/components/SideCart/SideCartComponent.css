@@ -1,6 +1,7 @@
 .sidecartWrapper {
     /* Sticking side cart to right */
     position: fixed;
+    z-index: 3;
     top: 65px;
     right: 0;
     bottom: 0;
@@ -58,7 +59,7 @@
     margin-top: 1rem;
 }
 
-.decrementBtn {
+/* .decrementBtn {
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
     padding: 10px;
@@ -73,7 +74,7 @@
 .decrementBtn:focus,
 .incrementBtn:focus {
     outline: none;
-}
+} 
 
 .quantityDisplay {
     padding: 10px;
@@ -82,7 +83,7 @@
 
 .quantityPicker {
     display: flex;
-}
+} */
 
 .cartItemImg {
     width: 70px;

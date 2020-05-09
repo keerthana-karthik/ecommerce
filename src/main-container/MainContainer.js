@@ -21,12 +21,16 @@ class MainContainer extends Component {
     }
     openSideBar = () => {
         document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
+        document.getElementById("navOverlay").style.display = "block";
     }
 
     closeSideBar = () => {
         document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
+        document.getElementById("navOverlay").style.display = "none";
+    }
+    closeSideCart = () => {
+        document.getElementById("cartOverlay").style.display = "none";
+        this.setState({showFloatingCart: false});
     }
     onNavLinkClick = (event) => {
         // document.getElementById("pageTitle").innerHTML = event.currentTarget.innerText;
@@ -35,6 +39,8 @@ class MainContainer extends Component {
     onFloatingCartIconClick = () => {
         const localShowFloatingCart = this.state.showFloatingCart;
         this.setState({showFloatingCart: !localShowFloatingCart});
+        
+        document.getElementById("cartOverlay").style.display = "block";
     }
     render() {
         const categories = getCategoriesMap().map(category => {
@@ -60,10 +66,10 @@ class MainContainer extends Component {
                 {/* <!-- Top menu on small screens --> */}
                 <header className={[mainClasses.styleBar, indexclasses.positionTop, indexclasses.displayNoneOnLarge, indexclasses.styleBlack, indexclasses.fontSize24].join(" ")}>
                     
-                    <div className={[mainClasses.styleBarItem].join(" ")}>
-                        <i onClick={this.openSideBar} className={[indexclasses.fa, indexclasses.faBars].join(" ")}></i>
+                    <div onClick={this.openSideBar} className={[mainClasses.styleBarItem].join(" ")}>
+                        <i className={[indexclasses.fa, indexclasses.faBars].join(" ")}></i>
                     </div>
-                    <div className={[mainClasses.styleBarItem, indexclasses.letterSpacing4].join(" ")}>
+                    <div className={[mainClasses.imgLogoWrapper, mainClasses.styleBarItem, indexclasses.letterSpacing4].join(" ")}>
                         <img src="https://res.cloudinary.com/imagesforwebpage/image/upload/v1588828307/logo_aab6mw.png" className={mainClasses.imgLogo}></img>
                     </div>
                     
@@ -76,7 +82,8 @@ class MainContainer extends Component {
                 </header>
 
                 {/* // <!-- Overlay effect when opening sidebar on small screens --> */}
-                <div className={[indexclasses.positionOverlay, indexclasses.cursorPointer, indexclasses.displayNoneOnLarge].join(" ")} onClick={this.closeSideBar} id="myOverlay"></div>
+                <div className={[indexclasses.positionOverlay, indexclasses.cursorPointer].join(" ")} onClick={this.closeSideBar} id="navOverlay"></div>
+                <div className={[indexclasses.positionOverlay, indexclasses.cursorPointer].join(" ")} onClick={this.closeSideCart} id="cartOverlay"></div>
 
                 {/* // <!-- !PAGE CONTENT! --> */}
                 <div className={mainClasses.pageContentWrapper}>

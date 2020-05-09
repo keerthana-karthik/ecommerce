@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as actions from "../../store/actions/index";
 import axios from "axios";
 import { connect } from 'react-redux';
+import QuantityButtonComponent from "../Forms/QuantityButton/QuantityButtonComponent";
 import indexClasses from "../../index.css";
 import sideCartClasses from "./SideCartComponent.css";
 
@@ -24,19 +25,8 @@ class SideCartComponent extends Component {
                         <div className={sideCartClasses.cartItemDetail}>
                             <div className={sideCartClasses.cartItemTitle}>{dress.type} - {dress.material}</div>
                             <div className={sideCartClasses.cartItemQuantityPrice}>
-                                <div className={sideCartClasses.cartItemQuantityChangeContainer}>
-                                    <div className={sideCartClasses.quantityPicker}>
-                                        <button className={sideCartClasses.decrementBtn}>
-                                            -
-                                            </button>
-                                        <div>
-                                            <input className={sideCartClasses.quantityDisplay} value="1" maxlength="1" />
-                                        </div>
-                                        <button className={sideCartClasses.incrementBtn}>
-                                            +
-                                            </button>
-                                    </div>
-                                </div>
+                            <QuantityButtonComponent>
+                            </QuantityButtonComponent>
                                 <div className={sideCartClasses.cartItemPrice}>
                                     Rs {dress.price}
                                 </div>

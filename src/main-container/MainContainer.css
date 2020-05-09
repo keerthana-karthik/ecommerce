@@ -21,6 +21,7 @@ nav,
 section {
     display: block
 }
+
 .imgLogo {
     height: 35px; 
     /* border-radius: 15px; */
@@ -145,7 +146,11 @@ section {
     display: block;
     width: 100%
 }
-
+.imgLogoWrapper.styleBarItem:hover {
+    color: inherit !important;
+    background-color: inherit !important;
+    cursor: default !important;
+}
 @media (min-width:993px) {
     .w3-modal-content {
         width: 900px

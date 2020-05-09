@@ -1,0 +1,37 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.quantityPicker {
+    display: flex;
+}
+.quantityDisplay {
+    padding: 10px;
+    width: 10px;
+    box-shadow: 0 8px 6px -6px black;;
+}
+.decrementBtn {
+    /* border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important; */
+    box-shadow: 0 0 1em rgba(0, 0, 0, .7);
+    padding: 10px;
+}
+
+.incrementBtn {
+    /* border-top-right-radius: 24px !important;
+    border-bottom-right-radius: 24px !important; */
+    box-shadow: 0 0 1em rgba(0, 0, 0, .7);
+    padding: 10px;
+}
+
+.decrementBtn:focus,
+.incrementBtn:focus {
+    outline: none;
+}

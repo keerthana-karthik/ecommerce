@@ -71,6 +71,8 @@
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  border-radius: 16px;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .3);
 }
 
 .styleButton:disabled {
@@ -80,7 +82,10 @@
 
 .styleButton:hover {
   color: #000 !important;
-  background-color: #ccc !important
+  background-color: #fff !important
+}
+.styleButton:focus {
+  outline: none;
 }
 
 /* Button */

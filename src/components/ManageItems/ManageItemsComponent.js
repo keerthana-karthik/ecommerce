@@ -64,9 +64,7 @@ class ManageItemsComponent extends Component {
                     />
                 ))
                 }
-                <ButtonComponent
-                    disabled={!this.state.formIsValid || !this.state.formTouched}
-                    >
+                <ButtonComponent disabled={!this.state.formIsValid || !this.state.formTouched}>
                     Submit
                 </ButtonComponent>
             </form>
