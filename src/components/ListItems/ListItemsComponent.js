@@ -10,10 +10,18 @@ import indexClasses from "../../index.css";
 class ListItemsComponent extends Component {
     componentDidMount() {
         // this.props.onInitItems();
-        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/salwars")
+        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
         .then(response => {
             this.props.onInitItems(response.data);
         });
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
+            .then(response => {
+                this.props.onInitItems(response.data);
+            });
+        }
     }
     getIndexInSelectedDressesArray = (dressIdentifier) => {
         let selectedItemIndex = -1;

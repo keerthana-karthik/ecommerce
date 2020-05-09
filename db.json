@@ -2,104 +2,7 @@
   "profile": {
     "name": "typicode"
   },
-  "salwars": [
-    {
-      "id": 8,
-      "category": "salwars",
-      "material": "Cotton",
-      "type": "Elegant Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits1_cvocct.jpg",
-      "price": 2125,
-      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
-    },{
-      "id": 9,
-      "category": "salwars",
-      "material": "Cotton",
-      "type": "Elegant Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits2_cvocct.jpg",
-      "price": 2125,
-      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
-    },{
-      "id": 10,
-      "category": "salwars",
-      "material": "Cotton",
-      "type": "Elegant Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits3_cvocct.jpg",
-      "price": 2125,
-      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
-    },{
-      "id": 11,
-      "category": "salwars",
-      "material": "Cotton",
-      "type": "Elegant Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits4_cvocct.jpg",
-      "price": 2125,
-      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
-    },
-    {
-      "id": 12,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits1_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 13,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits2_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 14,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits3_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 15,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits4_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 16,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits5_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 17,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits6_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    },
-    {
-      "id": 18,
-      "category": "salwars",
-      "material": "Cotton Jam Fabric",
-      "type": "Negative & Embroidery Suits",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/CottonJamFabricSuits7_cuqern.jpg",
-      "price": 1155,
-      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-    }
-  ],
+
   "kurtis": [
     {
       "id": 1,
@@ -160,9 +63,134 @@
       "category": "kurtis",
       "material": "Pure Patterned Cotton",
       "type": "Stylish Kurtis",
-      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Stylish_Kurtis3_l4i5wu.jpg",
       "price": 800,
       "description": "XXL size. Stylish Embroidery Fully Stitched"
+    },
+    {
+      "id": 19,
+      "category": "kurtis",
+      "material": "Pure Patterned Cotton",
+      "type": "Stylish Kurtis",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Stylish_Kurtis3_l4i5wu.jpg",
+      "price": 800,
+      "description": "XXL size. Stylish Embroidery Fully Stitched"
+    },
+    {
+      "id": 20,
+      "category": "kurtis",
+      "material": "Pure Patterned Cotton",
+      "type": "Stylish Kurtis",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Stylish_Kurtis3_l4i5wu.jpg",
+      "price": 800,
+      "description": "XXL size. Stylish Embroidery Fully Stitched"
+    },
+    {
+      "id": 21,
+      "category": "kurtis",
+      "material": "Pure Patterned Cotton",
+      "type": "Stylish Kurtis",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Stylish_Kurtis3_l4i5wu.jpg",
+      "price": 800,
+      "description": "XXL size. Stylish Embroidery Fully Stitched"
+    }
+  ],
+  "salwars": [
+    {
+      "id": 8,
+      "category": "salwars",
+      "material": "Cotton",
+      "type": "Elegant Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053581/Elegant_Suits1_frgpfs.jpg",
+      "price": 2125,
+      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
+    },{
+      "id": 9,
+      "category": "salwars",
+      "material": "Cotton",
+      "type": "Elegant Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Elegant_Suits2_fxdosg.jpg",
+      "price": 2125,
+      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
+    },{
+      "id": 10,
+      "category": "salwars",
+      "material": "Cotton",
+      "type": "Elegant Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053581/Elegant_Suits3_cvocct.jpg",
+      "price": 2125,
+      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
+    },{
+      "id": 11,
+      "category": "salwars",
+      "material": "Cotton",
+      "type": "Elegant Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/Elegant_Suits4_v8yavd.jpg",
+      "price": 2125,
+      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
+    },
+    {
+      "id": 12,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053579/CottonJamFabricSuits1_poilnj.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 13,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053579/CottonJamFabricSuits2_jmdnne.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 14,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053579/CottonJamFabricSuits3_kq5teg.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 15,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053579/CottonJamFabricSuits4_qttiyg.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 16,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/CottonJamFabricSuits5_cuqern.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 17,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053579/CottonJamFabricSuits6_zs1ufp.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
+    },
+    {
+      "id": 18,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589053580/CottonJamFabricSuits7_o74su4.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
     }
   ]
 }
