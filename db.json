@@ -1,95 +1,90 @@
 {
-    "dresses": [
-      {
-        "kurtis" : [
-          {
-            "id": 1,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_floral_white_tj3rpn.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 2,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_yellow_red_hiv32b.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 3,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_grey_yellow_uqxlov.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 4,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_drkblue_pink_opamj0.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 5,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_cream_yello_hdexdi.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 6,
-            "category": "kurtis",
-            "material": "Soft Rayon Cotton",
-            "type": "Kurtis Plazzo Set",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
-            "price" : 899,
-            "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
-          },
-          {
-            "id": 7,
-            "category": "kurtis",
-            "material": "Pure Patterned Cotton",
-            "type": "Stylish Kurtis",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
-            "price" : 800,
-            "description": "XXL size. Stylish Embroidery Fully Stitched"
-          }
-        ]
-      }, {
-        "salwar" : [
-          {
-            "id": 8,
-            "category": "salwars",
-            "material": "Cotton",
-            "type": "Elegant Suits",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits3_cvocct.jpg",
-            "price" : 2125,  
-            "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
-          },
-          {
-            "id": 9,
-            "category": "salwars",
-            "material": "Cotton Jam Fabric",
-            "type": "Negative & Embroidery Suits",
-            "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits1_frgpfs.jpg",
-            "price" : 1155,
-            "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
-          }
-        ]
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "profile": {
+    "name": "typicode"
+  },
+  "salwar": [
+    {
+      "id": 8,
+      "category": "salwars",
+      "material": "Cotton",
+      "type": "Elegant Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits3_cvocct.jpg",
+      "price": 2125,
+      "description": "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta."
+    },
+    {
+      "id": 9,
+      "category": "salwars",
+      "material": "Cotton Jam Fabric",
+      "type": "Negative & Embroidery Suits",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1589053581/Elegant_Suits1_frgpfs.jpg",
+      "price": 1155,
+      "description": "Mal Mal Cotton Box Pallu Printed Dupatta. Cotton Bottom"
     }
-  }
+  ],
+  "kurtis": [
+    {
+      "id": 1,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_floral_white_tj3rpn.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 2,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_yellow_red_hiv32b.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 3,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_grey_yellow_uqxlov.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 4,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_drkblue_pink_opamj0.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 5,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_cream_yello_hdexdi.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 6,
+      "category": "kurtis",
+      "material": "Soft Rayon Cotton",
+      "type": "Kurtis Plazzo Set",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
+      "price": 899,
+      "description": "Sizes in Palazzo - Free Size. Length of Kurtis : 48 - 52Length of Palazzo - 36-38. Style of Kurtis : Umbrella Frocks"
+    },
+    {
+      "id": 7,
+      "category": "kurtis",
+      "material": "Pure Patterned Cotton",
+      "type": "Stylish Kurtis",
+      "imgUrl": "https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
+      "price": 800,
+      "description": "XXL size. Stylish Embroidery Fully Stitched"
+    }
+  ]
+}
