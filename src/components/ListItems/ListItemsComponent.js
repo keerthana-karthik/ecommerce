@@ -10,7 +10,7 @@ import indexClasses from "../../index.css";
 class ListItemsComponent extends Component {
     componentDidMount() {
         // this.props.onInitItems();
-        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/dresses")
+        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/salwars")
         .then(response => {
             this.props.onInitItems(response.data);
         });
