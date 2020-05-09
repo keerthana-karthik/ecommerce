@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import * as actions from "../../store/actions/index";
-import { connect } from 'react-redux';
-import indexclasses from "../../index.css";
-import homeclasses from "./HomeComponent.css";
+import { withRouter } from 'react-router-dom';
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from "../../store/actions/index";
 import ListItemsComponent from "../ListItems/ListItemsComponent";
 import ViewItemComponent from "../ManageItems/ViewItemComponent";
 import ManageItemsComponent from "../ManageItems/ManageItemsComponent";
 import CustomFormComponent from "../Forms/CustomFormComponent";
 import PageNotFoundComponent from "../PageNotFound/PageNotFoundComponent";
 import navBarClasses from "./NavBarComponent.css";
-import { withRouter } from 'react-router-dom';
+import homeclasses from "./HomeComponent.css";
 
 class HomeComponent extends Component {
   collapsed = true;
@@ -66,31 +65,33 @@ class HomeComponent extends Component {
               <li className={navBarClasses.NavLi}>
                 <NavLink to="/addItem" className={homeclasses.Content} activeClassName={homeclasses.active}>
                   Add Item
-                            </NavLink>
+                </NavLink>
               </li>
               <li className={navBarClasses.NavLi}>
                 <NavLink to="/items" className={homeclasses.Content} activeClassName={homeclasses.active}>
                   View Items
-                            </NavLink>
+                </NavLink>
               </li>
               <li className={navBarClasses.NavLi}>
                 <NavLink to="/viewitem" className={homeclasses.Content} activeClassName={homeclasses.active}>
                   View Item
-                            </NavLink>
+                </NavLink>
               </li>
               <li className={navBarClasses.NavLi}>
                 <NavLink to="/form" className={homeclasses.Content} activeClassName={homeclasses.active}>
                   Form
-                            </NavLink>
+                </NavLink>
               </li>
 
             </ul>
           </div>
           <div className={this.state.sideNavbarClasses.join(" ")}>
             <div className={navBarClasses.SideNavUl}>
-            <div className={navBarClasses.SideNavLi}><NavLink to="/addItem" className={navBarClasses.SideNavContent} activeClassName={navBarClasses.active}>
+            <div className={navBarClasses.SideNavLi}>
+              <NavLink to="/addItem" className={navBarClasses.SideNavContent} activeClassName={navBarClasses.active}>
                   Add Item
-                            </NavLink></div>
+              </NavLink>
+            </div>
             <div className={navBarClasses.SideNavLi}><NavLink to="/items" className={navBarClasses.SideNavContent} activeClassName={navBarClasses.active}>
                   View Items
                             </NavLink></div>

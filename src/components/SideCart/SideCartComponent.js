@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import * as actions from "../../store/actions/index";
-import axios from "axios";
 import { connect } from 'react-redux';
+import * as actions from "../../store/actions/index";
+import PriceComponent from "../Price/PriceComponent";
 import QuantityButtonComponent from "../Forms/QuantityButton/QuantityButtonComponent";
 import indexClasses from "../../index.css";
 import sideCartClasses from "./SideCartComponent.css";
@@ -15,6 +15,15 @@ class SideCartComponent extends Component {
             this.sideCartWrapperClasses = [sideCartClasses.sidecartWrapper, indexClasses.displayNone];
         }
         const dressArray = [...this.props.selecteddressesArray];
+        let isCartEmpty = (!this.props.selecteddressesArray || (this.props.selecteddressesArray && this.props.selecteddressesArray.length === 0)) ? true : false;
+        let cartEmptyMsg = null;
+        if(isCartEmpty) {
+            cartEmptyMsg = (
+                <div className={[sideCartClasses.cartEmptyMsg].join(" ")}>
+                    Cart is empty
+                </div>
+            );
+        }
         const dresses = dressArray.map(dress => {
             return (
                 <div className={sideCartClasses.cartItemWrapper}>
@@ -25,10 +34,10 @@ class SideCartComponent extends Component {
                         <div className={sideCartClasses.cartItemDetail}>
                             <div className={sideCartClasses.cartItemTitle}>{dress.type} - {dress.material}</div>
                             <div className={sideCartClasses.cartItemQuantityPrice}>
-                            <QuantityButtonComponent>
+                            <QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={dress.selectedQuantity}>
                             </QuantityButtonComponent>
                                 <div className={sideCartClasses.cartItemPrice}>
-                                    Rs {dress.price}
+                                <PriceComponent>{dress.priceForQuantity}</PriceComponent>
                                 </div>
                             </div>
                         </div>
@@ -41,18 +50,18 @@ class SideCartComponent extends Component {
                 <div className={sideCartClasses.sidecartContainer}>
                     <header className={sideCartClasses.cartHeader}>
                         <span>Cart</span>
-                        <div>0 item</div>
+                        <div>{this.props.totalQuantity} item</div>
                     </header>
                     <div className={sideCartClasses.cartItems}>
                         {dresses}
-                        <div className={[sideCartClasses.cartEmptymsg, indexClasses.displayNone].join(" ")}>
-                            Cart is empty
-                        </div>
+                        {cartEmptyMsg}
                     </div>
                     <footer className={sideCartClasses.cartFooter}>
                         <div className={sideCartClasses.cartTotalSection}>
                             <span className={sideCartClasses.totalLabel}>Subtotal:</span>
-                            <span className={sideCartClasses.totalPrice}>$0.00</span>
+                            <span className={sideCartClasses.totalPrice}>
+                                <PriceComponent>{this.props.totalPrice}</PriceComponent>
+                            </span>
                         </div>
                         <button className={sideCartClasses.buttonPrimary}>Check Out</button>
                     </footer>
@@ -64,7 +73,9 @@ class SideCartComponent extends Component {
 const mapStateToProps = state => {
     return {
         dressesArray: state.dressManageReducer.dresses,
-        selecteddressesArray: state.orderManageReducer.selectedDresses
+        selecteddressesArray: state.orderManageReducer.selectedDresses,
+        totalQuantity: state.orderManageReducer.totalQuantity,
+        totalPrice: state.orderManageReducer.totalPrice
     };
 };
 const mapDispatchToProps = dispatch => {

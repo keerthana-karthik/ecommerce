@@ -1,0 +1,16 @@
+.priceWrapper {
+    color: #B12704;
+    font-size: 18px;
+    /* margin-top: 8px;
+    margin-bottom: 2rem; */
+}
+.priceSymbol {
+    color: #B12704;
+    box-sizing: border-box;
+    position: relative;
+    top: -.5em;
+    font-size: 12px;
+}
+.price {
+    margin-left: 5px;
+}

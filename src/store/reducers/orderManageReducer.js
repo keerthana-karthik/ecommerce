@@ -2,40 +2,56 @@ import * as Actions from "../actions/actionTypes";
 import { updateStateObject } from "../helper";
 const initialState = {
     selectedDresses: [],
+    totalQuantity: 0,
     totalPrice: 0
 }
 const addSelectedItem = (state, action) => {
     let newTotalPrice = 0;
+    let newTotalQuantity = 0;
     let newSelectedDresses = [];
-    let priceForQuantity = action.selectedDress.price;
-    let newSelectedItem = {...action.selectedDress, "quantity": 1, "priceForQuantity": priceForQuantity};
+    let priceForQuantity = parseInt(action.selectedDress.price);
+    let newSelectedItem = {...action.selectedDress, "selectedQuantity": 1, "priceForQuantity": priceForQuantity};
     newSelectedDresses = [...state.selectedDresses];
     newSelectedDresses.push(newSelectedItem);
-    newTotalPrice = state.totalPrice + action.selectedDress.price;
+    newTotalPrice = parseInt(state.totalPrice) + priceForQuantity;
+    newTotalQuantity = parseInt(state.totalQuantity) + 1;
     const updatedState = {
         selectedDresses: newSelectedDresses,
+        totalQuantity: newTotalQuantity,
         totalPrice: newTotalPrice
     }
     return updateStateObject( state, updatedState );
 }
 const updateSelectedItem = (state, action) => {
     let newTotalPrice = 0;
+    let newTotalQuantity = 0;
     let newSelectedItem = {};
     let newSelectedDresses = [];
     let newPriceForQuantity = 0;
     let oldPriceForQuantity = 0;
+    let newSelectedQuantity = 0;
+    let oldSelectedQuantity = 0;
 
     newSelectedDresses = [...state.selectedDresses];
     for ( let index in newSelectedDresses ) {
         if(newSelectedDresses[index].id === action.selectedDress.selectedId) {
+            oldSelectedQuantity = newSelectedDresses[index].selectedQuantity;
+            newSelectedQuantity = parseInt(action.selectedDress.selectedQuantity);
             oldPriceForQuantity = newSelectedDresses[index].priceForQuantity;
-            newPriceForQuantity = newSelectedDresses[index].price * parseInt(action.selectedDress.selectedQuantity);
-            newTotalPrice = newSelectedDresses[index].totalPrice + newPriceForQuantity - oldPriceForQuantity;
-            newSelectedItem = {...newSelectedDresses[index], "quantity": action.selectedDress.selectedQuantity, "priceForQuantity": newPriceForQuantity};
+            newPriceForQuantity = newSelectedDresses[index].price * newSelectedQuantity;
+            if(newSelectedQuantity < 1) {
+                newSelectedDresses.splice(index, 1);
+            }else {
+                newSelectedItem = {...newSelectedDresses[index], "selectedQuantity": action.selectedDress.selectedQuantity, "priceForQuantity": newPriceForQuantity};
+                newSelectedDresses[index] = newSelectedItem;
+            }
+            newTotalQuantity = state.totalQuantity + newSelectedQuantity - oldSelectedQuantity;
+            newTotalPrice = state.totalPrice + newPriceForQuantity - oldPriceForQuantity;
         }
     }
     const updatedState = {
         selectedDresses: newSelectedDresses,
+        totalQuantity: newTotalQuantity,
         totalPrice: newTotalPrice
     }
     return updateStateObject( state, updatedState );

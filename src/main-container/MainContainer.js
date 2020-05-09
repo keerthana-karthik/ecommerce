@@ -1,19 +1,16 @@
 import React, { Component } from "react";
-import * as actions from "../store/actions/index";
-
-import { connect } from 'react-redux';
-import SideCartComponent from "../components/SideCart/SideCartComponent";
-import indexclasses from "../index.css";
-import mainClasses from "./MainContainer.css";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from "../store/actions/index";
+import { getCategoriesMap } from "../store/helper";
+import SideCartComponent from "../components/SideCart/SideCartComponent";
 import ListItemsComponent from "../components/ListItems/ListItemsComponent";
 import ViewItemComponent from "../components/ManageItems/ViewItemComponent";
 import ManageItemsComponent from "../components/ManageItems/ManageItemsComponent";
 import CustomFormComponent from "../components/Forms/CustomFormComponent";
 import PageNotFoundComponent from "../components/PageNotFound/PageNotFoundComponent";
-import { getCategoriesMap } from "../store/helper";
-
-import { withRouter } from 'react-router-dom';
+import indexclasses from "../index.css";
+import mainClasses from "./MainContainer.css";
 
 class MainContainer extends Component {
     state= {
@@ -75,7 +72,7 @@ class MainContainer extends Component {
                     
                     <a className={[mainClasses.styleBarIcons, indexclasses.positionRight].join(" ")}>
                         
-                        <span onClick={this.onFloatingCartIconClick} data-count={this.props.selecteddressesArray.length} className={indexclasses.faStack}>
+                        <span onClick={this.onFloatingCartIconClick} data-count={this.props.totalQuantity} className={indexclasses.faStack}>
                             <i className={[indexclasses.fa, indexclasses.faShoppingCart, indexclasses.faStack2x].join(" ")}></i>
                         </span>
                     </a>
@@ -91,8 +88,8 @@ class MainContainer extends Component {
                     <header className={[indexclasses.displayNoneOnSmall, indexclasses.responsiveContainer, indexclasses.fontSize24].join(" ")}>
                         {/* <p id="pageTitle" className={indexclasses.positionLeft}>Salwars</p> */}
                         <p className={indexclasses.positionRight}>
-                            <i className={[indexclasses.fa, indexclasses.faSearch, indexclasses.marginRight16].join(" ")}></i>
-                            <span onClick={this.onFloatingCartIconClick} data-count={this.props.selecteddressesArray.length} className={indexclasses.faStack}>
+                            {/* <i className={[indexclasses.fa, indexclasses.faSearch, indexclasses.marginRight16].join(" ")}></i> */}
+                            <span onClick={this.onFloatingCartIconClick} data-count={this.props.totalQuantity} className={indexclasses.faStack}>
                                 <i className={[indexclasses.fa, indexclasses.faShoppingCart, indexclasses.faStack2x].join(" ")}></i>
                             </span>
                         </p>
@@ -118,7 +115,9 @@ class MainContainer extends Component {
 const mapStateToProps = state => {
     return {
         dressesArray: state.dressManageReducer.dresses,
-        selecteddressesArray: state.orderManageReducer.selectedDresses
+        selecteddressesArray: state.orderManageReducer.selectedDresses,
+        totalQuantity: state.orderManageReducer.totalQuantity,
+        totalPrice: state.orderManageReducer.totalPrice
     };
 };
 const mapDispatchToProps = dispatch => {

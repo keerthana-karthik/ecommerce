@@ -17,7 +17,7 @@ class ViewItemComponent extends Component {
                                 <div className={manageItemsClasses.ItemDetailBrand}>Vipul Salwars</div>
                             </div>
                             <div className={manageItemsClasses.ItemDetail}>
-                                <div className={manageItemsClasses.ItemDetailPrice}>Rs 1200</div>
+                                <div className={manageItemsClasses.ItemDetailPrice}>₹ 1200</div>
                             </div>
                             <div className={manageItemsClasses.ItemDetail}>
                                 <div className={manageItemsClasses.ItemDetailDesc}>With Silk Duppata</div>

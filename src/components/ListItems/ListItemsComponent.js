@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
-import ButtonComponent from "../Forms/Button/ButtonComponent";
-import QuantityButtonComponentt from "../Forms/QuantityButton/QuantityButtonComponent";
-import indexClasses from "../../index.css";
-import sideCartClasses from "../SideCart/SideCartComponent.css";
 import { getCategoryDisplayName } from "../../store/helper";
-import QuantityButtonComponent from "../Forms/QuantityButton/QuantityButtonComponent";
+import ButtonComponent from "../Forms/Button/ButtonComponent";
+import PriceComponent from "../Price/PriceComponent";
+import indexClasses from "../../index.css";
 
 class ListItemsComponent extends Component {
     componentDidMount() {
@@ -62,13 +60,12 @@ class ListItemsComponent extends Component {
             let selectedItemIndex = this.getIndexInSelectedDressesArray(dress.id);
             let selectedItemQuantity = 0;
             if(selectedItemIndex > -1) {
-                selectedItemQuantity = this.props.selectedDressesArray[selectedItemIndex].quantity;
+                selectedItemQuantity = this.props.selectedDressesArray[selectedItemIndex].selectedQuantity;
             }
             
             if(selectedItemIndex > -1 && selectedItemQuantity > 0) {
-                buttonToSelect = <QuantityButtonComponent
-                selectedItem={dress}>
-                </QuantityButtonComponent>;
+                buttonToSelect = <ButtonComponent disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
+                // buttonToSelect = (<QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={1}></QuantityButtonComponent>);
             }else {
                 buttonToSelect = <ButtonComponent
                     clicked={event =>
@@ -87,7 +84,10 @@ class ListItemsComponent extends Component {
                                 {buttonToSelect}
                             </div>
                         </div>
-                        <p>{dress.type} - {dress.material}<br></br><b>Rs {dress.price}</b></p>
+                        <h6 className={indexClasses.marginBottom20}>
+                            <div className={indexClasses.marginBottom5}>{dress.type} - {dress.material}</div>
+                            <PriceComponent>{dress.price}</PriceComponent>
+                        </h6>
                     </div>
                 </div>
             );

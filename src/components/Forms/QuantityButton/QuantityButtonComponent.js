@@ -6,27 +6,34 @@ import classes from "./QuantityButtonComponent.css";
 
 class QuantityButtonComponent extends Component {
   state = {
-    quantityDisplayValue: 1
+    quantityDisplayValue: this.props.selectedItem.selectedQuantity
   }
   render() {
 
-  const onDecrementBtn = () => {
-    let newQuantityDisplayValue = this.state.quantityDisplayValue - 1;
-    this.setState({quantityDisplayValue : newQuantityDisplayValue});
-    this.props.updateSelectedItem({"selectedId": this.props.selectedItem.id, "selectedQuantity": newQuantityDisplayValue});
-  }
-  const onIncrementBtn = () => {
-    let newQuantityDisplayValue = this.state.quantityDisplayValue + 1;
-    this.setState({quantityDisplayValue : newQuantityDisplayValue});
-    this.props.updateSelectedItem({"selectedId": this.props.selectedItem.id, "selectedQuantity": newQuantityDisplayValue});
-  }
+    const onDecrementBtn = (event) => {
+      let newQuantityDisplayValue = this.state.quantityDisplayValue - 1;
+      this.setState({quantityDisplayValue : newQuantityDisplayValue});
+      this.props.updateSelectedItem({"selectedId": this.props.selectedItem.id, "selectedQuantity": newQuantityDisplayValue});
+    }
+    const onIncrementBtn = () => {
+      let newQuantityDisplayValue = this.state.quantityDisplayValue + 1;
+      this.setState({quantityDisplayValue : newQuantityDisplayValue});
+      this.props.updateSelectedItem({"selectedId": this.props.selectedItem.id, "selectedQuantity": newQuantityDisplayValue});
+    }
+    const updateQuantity = (event) => {
+      let newQuantityDisplayValue = event.target.value;
+      this.setState({quantityDisplayValue : newQuantityDisplayValue});
+      this.props.updateSelectedItem({"selectedId": this.props.selectedItem.id, "selectedQuantity": newQuantityDisplayValue});
+    }
+    
+    
     return (
       <div className={classes.quantityPicker}>
         <button className={classes.decrementBtn} onClick={onDecrementBtn}>
           -
         </button>
         <div>
-          <input type="number" className={classes.quantityDisplay} value={this.state.quantityDisplayValue} maxlength="1" />
+          <input id="quantityDisplay" type="number" className={classes.quantityDisplay} value={this.state.quantityDisplayValue} maxlength="1" />
         </div>
         <button className={classes.incrementBtn} onClick={onIncrementBtn}>
           +
@@ -37,7 +44,7 @@ class QuantityButtonComponent extends Component {
 }
 const mapStateToProps = state => {
   return {
-    selecteddressesArray: state.orderManageReducer.selectedDresses
+    selectedDressesArray: state.orderManageReducer.selectedDresses
   };
 };
 const mapDispatchToProps = dispatch => {

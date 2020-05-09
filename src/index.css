@@ -69,15 +69,15 @@
   color: inherit;
   background-color: inherit;
   text-align: center;
-  cursor: pointer;
+  cursor: pointer !important;
   white-space: nowrap;
   border-radius: 16px;
   box-shadow: 0 0 2em rgba(0, 0, 0, .3);
 }
 
 .styleButton:disabled {
-  cursor: not-allowed;
-  opacity: 0.3
+  cursor: not-allowed !important;
+  opacity: 0.7
 }
 
 .styleButton:hover {
@@ -694,7 +694,9 @@ h6 {
 .marginRight16 {
   margin-right: 16px !important
 }
-
+.marginBottom5 {
+  margin-bottom: 5px !important
+}
 .marginBottom20 {
   margin-bottom: 20px !important
 }
