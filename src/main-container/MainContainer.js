@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
+import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../store/actions/index";
 import { getCategoriesMap } from "../store/helper";
@@ -15,6 +16,15 @@ import mainClasses from "./MainContainer.css";
 class MainContainer extends Component {
     state= {
         showFloatingCart: false
+    }
+    componentDidMount() {
+        // this.props.onInitItems();
+        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/salwars")
+        .then(response => {
+            this.props.onInitItems(response.data);
+        }).catch( error => {
+            this.props.onInitItems([]);
+        } );
     }
     openSideBar = () => {
         document.getElementById("mySidebar").style.display = "block";
@@ -42,7 +52,7 @@ class MainContainer extends Component {
     render() {
         const categories = getCategoriesMap().map(category => {
             return (
-                <NavLink to={"/items/"+category.key} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>{category.value}</NavLink>
+                <NavLink key={"NavLink"+category.key} to={"/items/"+category.key} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>{category.value}</NavLink>
             )
         });
         return (
@@ -99,7 +109,7 @@ class MainContainer extends Component {
                     <div className={[indexclasses.responsiveContainer].join(" ")}>
                         <Switch>
                             <Route path="/addItem" exact component={ManageItemsComponent} />
-                            <Route path="/viewItem" exact component={ViewItemComponent} />
+                            <Route path="/viewItem/:category/:id" exact component={ViewItemComponent} />
                             <Route path={"/items" + '/:id'} exact component={ListItemsComponent} />
                             <Route path="/form" exact component={CustomFormComponent} />
                             <Redirect from="/" to="/items/salwars" />

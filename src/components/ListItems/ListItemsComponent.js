@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
@@ -13,14 +14,18 @@ class ListItemsComponent extends Component {
         axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
         .then(response => {
             this.props.onInitItems(response.data);
-        });
+        }).catch( error => {
+            this.props.onInitItems([]);
+        } );
     }
     componentDidUpdate(prevProps) {
         if (this.props.match.params.id !== prevProps.match.params.id) {
             axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
             .then(response => {
                 this.props.onInitItems(response.data);
-            });
+            }).catch( error => {
+                this.props.onInitItems([]);
+            } );
         }
     }
     getIndexInSelectedDressesArray = (dressIdentifier) => {
@@ -40,7 +45,6 @@ class ListItemsComponent extends Component {
                     ...this.props.dressesArray[index]
                 };
                 this.props.addSelectedItem(selectedItem);
-
                 // this.props.setSelectedItems(localSelectedDresses);
             }
         }
@@ -72,10 +76,10 @@ class ListItemsComponent extends Component {
             }
             
             if(selectedItemIndex > -1 && selectedItemQuantity > 0) {
-                buttonToSelect = <ButtonComponent disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
+                buttonToSelect = <ButtonComponent key={"ButtonComponent"+dress.id} disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
                 // buttonToSelect = (<QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={1}></QuantityButtonComponent>);
             }else {
-                buttonToSelect = <ButtonComponent
+                buttonToSelect = <ButtonComponent key={"ButtonComponent"+dress.id} 
                     clicked={event =>
                         this.onAddToCart(event, dress.id)
                         }>
@@ -83,18 +87,20 @@ class ListItemsComponent extends Component {
                 </ButtonComponent>
             }
             return (
-                <div className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6].join(" ")}>
+                <div key={"div"+dress.id} className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6].join(" ")}>
                     <div className={indexClasses.responsiveContainer}>
                         <div className={indexClasses.positionDisplayContainer}>
-                            <img src={dress.imgUrl} alt="Dress image" className={indexClasses.width100}></img>
-                            <span className={[indexClasses.positionDisplayTopleft, indexClasses.styleTag].join(" ")}>New</span>
+                            <Link key={"Link"+dress.id} to={{"pathname":"/viewItem/"+dress.category+"/"+dress.id}} >
+                                <img src={dress.imgUrl} alt="Dress image" className={indexClasses.width100}></img>
+                            </Link>
+                            {/* <span className={[indexClasses.positionDisplayTopleft, indexClasses.styleTag].join(" ")}>New</span> */}
                             <div className={[indexClasses.positionDisplayMiddle, indexClasses.positionDisplayHover].join(" ")}>
                                 {buttonToSelect}
                             </div>
                         </div>
                         <h6 className={indexClasses.marginBottom20}>
                             <div className={indexClasses.marginBottom5}>{dress.type} - {dress.material}</div>
-                            <PriceComponent>{dress.price}</PriceComponent>
+                            <PriceComponent key={"PriceComponent"+dress.id} >{dress.price}</PriceComponent>
                         </h6>
                     </div>
                 </div>

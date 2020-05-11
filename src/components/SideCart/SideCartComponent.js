@@ -37,7 +37,7 @@ class SideCartComponent extends Component {
                             <QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={dress.selectedQuantity}>
                             </QuantityButtonComponent>
                                 <div className={sideCartClasses.cartItemPrice}>
-                                <PriceComponent>{dress.priceForQuantity}</PriceComponent>
+                                <PriceComponent key={"PriceComponent"+dress.id}>{dress.priceForQuantity}</PriceComponent>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ class SideCartComponent extends Component {
                     </div>
                     <footer className={sideCartClasses.cartFooter}>
                         <div className={sideCartClasses.cartTotalSection}>
-                            <span className={sideCartClasses.totalLabel}>Subtotal:</span>
+                            <span className={sideCartClasses.totalLabel, indexClasses.marginBottom20}>Subtotal:</span>
                             <span className={sideCartClasses.totalPrice}>
                                 <PriceComponent>{this.props.totalPrice}</PriceComponent>
                             </span>
