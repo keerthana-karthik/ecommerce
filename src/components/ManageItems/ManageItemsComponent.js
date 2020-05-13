@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import formState from "./ItemFormState";
 import FormsHelper from "../Forms/FormsHelper";
+import { postDataOnServer } from "../../store/helper";
 import FormElementComponent from "../Forms/FormElement/FormElementComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import manageItemsClasses from "./ManageItemsComponent.css";
@@ -36,7 +37,18 @@ class ManageItemsComponent extends Component {
     
       submitHandler = event => {
         event.preventDefault();
-        console.log(this.state.customFormData);
+        console.log(this.state.formData);
+        
+        let formData = this.state.formData;
+        let postBody = {
+          "category": formData.category.value,
+          "material": formData.material.value,
+          "type": formData.type.value,
+          "imgUrl": formData.imgUrl.value,
+          "price": formData.price.value,
+          "description": formData.description.value
+        }
+        postDataOnServer(postBody);
       };
     render() {
         let formElementsArray = [];
@@ -45,6 +57,10 @@ class ManageItemsComponent extends Component {
                 id: key,
                 config: this.state.formData[key]
             });
+        }
+        let imgForDress = null;
+        if(this.state.formData.imgUrl.value) {
+          imgForDress = (<img src={this.state.formData.imgUrl.value} alt="img 1" className={indexClasses.width100}></img>);
         }
         
         let form = (
@@ -70,10 +86,11 @@ class ManageItemsComponent extends Component {
             </form>
         );
         return (
+            
             <div className={manageItemsClasses.ManageItemWrapper}>
                 <div className={manageItemsClasses.FormWrapper}>
                     <div className={manageItemsClasses.FormImgSection}>
-                    <img src="https://res.cloudinary.com/imagesforwebpage/image/upload/c_scale,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg" alt="img 1" className={indexClasses.width100}></img>
+                      {imgForDress}
                     </div>
                     <div className={manageItemsClasses.FormSection}>
                         <h3>Add</h3>

@@ -4,28 +4,52 @@ import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
 import { getCategoryDisplayName } from "../../store/helper";
+import AddToCartComponent from "../Forms/AddToCart/AddToCartComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import PriceComponent from "../Price/PriceComponent";
 import indexClasses from "../../index.css";
 
 class ListItemsComponent extends Component {
     componentDidMount() {
-        // this.props.onInitItems();
-        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
-        .then(response => {
-            this.props.onInitItems(response.data);
-        }).catch( error => {
-            this.props.onInitItems([]);
-        } );
+        // this.props.onInitItems(this.props.match.params.id);
+        let fetchedDressess = [];
+        let category = this.props.match.params.id;
+
+    axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
+        .then(res => {
+            for (let key in res.data) {
+                fetchedDressess.push({
+                    ...res.data[key],
+                    id: key
+                });
+            }
+            if(fetchedDressess && fetchedDressess.length >  0) {
+                this.props.onInitItems(fetchedDressess);
+            }
+            
+        }).catch(error => {
+            fetchedDressess = [];
+        });
     }
     componentDidUpdate(prevProps) {
-        if (this.props.match.params.id !== prevProps.match.params.id) {
-            axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/"+this.props.match.params.id)
-            .then(response => {
-                this.props.onInitItems(response.data);
-            }).catch( error => {
-                this.props.onInitItems([]);
-            } );
+        let fetchedDressess = [];
+        let category = this.props.match.params.id;
+        if (category !== prevProps.match.params.id) {
+            axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
+        .then(res => {
+            for (let key in res.data) {
+                fetchedDressess.push({
+                    ...res.data[key],
+                    id: key
+                });
+            }
+            if(fetchedDressess && fetchedDressess.length >  0) {
+                this.props.onInitItems(fetchedDressess);
+            }
+            
+        }).catch(error => {
+            fetchedDressess = [];
+        });
         }
     }
     getIndexInSelectedDressesArray = (dressIdentifier) => {
@@ -37,7 +61,7 @@ class ListItemsComponent extends Component {
         }
         return selectedItemIndex;
     }
-    onAddToCart = (event, dressIdentifier) => {
+    onAddToCart = (dressIdentifier) => {
         let selectedItem = {};
         for(let index in this.props.dressesArray) {
             if(this.props.dressesArray[index].id === dressIdentifier) {
@@ -45,7 +69,6 @@ class ListItemsComponent extends Component {
                     ...this.props.dressesArray[index]
                 };
                 this.props.addSelectedItem(selectedItem);
-                // this.props.setSelectedItems(localSelectedDresses);
             }
         }
     }
@@ -79,12 +102,7 @@ class ListItemsComponent extends Component {
                 buttonToSelect = <ButtonComponent key={"ButtonComponent"+dress.id} disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
                 // buttonToSelect = (<QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={1}></QuantityButtonComponent>);
             }else {
-                buttonToSelect = <ButtonComponent key={"ButtonComponent"+dress.id} 
-                    clicked={event =>
-                        this.onAddToCart(event, dress.id)
-                        }>
-                    Add To Cart  <i className={[indexClasses.fa, indexClasses.faShoppingCart].join(" ")}></i>
-                </ButtonComponent>
+                buttonToSelect = <AddToCartComponent key={"AddToCartComponent"+dress.id} dressId={dress.id} ></AddToCartComponent>;
             }
             return (
                 <div key={"div"+dress.id} className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6].join(" ")}>
@@ -94,7 +112,7 @@ class ListItemsComponent extends Component {
                                 <img src={dress.imgUrl} alt="Dress image" className={indexClasses.width100}></img>
                             </Link>
                             {/* <span className={[indexClasses.positionDisplayTopleft, indexClasses.styleTag].join(" ")}>New</span> */}
-                            <div className={[indexClasses.positionDisplayMiddle, indexClasses.positionDisplayHover].join(" ")}>
+                            <div className={[indexClasses.positionDisplayTopleft, indexClasses.positionDisplayHover].join(" ")}>
                                 {buttonToSelect}
                             </div>
                         </div>

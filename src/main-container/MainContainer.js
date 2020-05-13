@@ -18,13 +18,24 @@ class MainContainer extends Component {
         showFloatingCart: false
     }
     componentDidMount() {
-        // this.props.onInitItems();
-        axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/salwars")
-        .then(response => {
-            this.props.onInitItems(response.data);
-        }).catch( error => {
-            this.props.onInitItems([]);
-        } );
+        let fetchedDressess = [];
+        let category = "salwars";
+
+    axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
+        .then(res => {
+            for (let key in res.data) {
+                fetchedDressess.push({
+                    ...res.data[key],
+                    id: key
+                });
+            }
+            if(fetchedDressess && fetchedDressess.length >  0) {
+                this.props.onInitItems(fetchedDressess);
+            }
+            
+        }).catch(error => {
+            fetchedDressess = [];
+        });
     }
     openSideBar = () => {
         document.getElementById("mySidebar").style.display = "block";
@@ -67,7 +78,7 @@ class MainContainer extends Component {
                     <div className={mainClasses.styleSidebarLinkWrapper}>
                         {categories}    
                     </div>
-                    <a href="#footer" className={mainClasses.styleBarItem}>Contact Us</a>
+                    <NavLink key={"NavLinkaddItem"} to={"/addItem"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>Add Item</NavLink>
                 </nav>
 
                 {/* <!-- Top menu on small screens --> */}

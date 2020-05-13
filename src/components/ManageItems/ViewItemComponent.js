@@ -3,6 +3,8 @@ import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
 import PriceComponent from "../Price/PriceComponent";
+import ButtonComponent from "../Forms/Button/ButtonComponent";
+import AddToCartComponent from "../Forms/AddToCart/AddToCartComponent";
 import manageItemsClasses from "./ManageItemsComponent.css";
 import indexClasses from "../../index.css";
 
@@ -12,21 +14,17 @@ class ViewItemComponent extends Component {
         dress: {}
     }
     componentDidMount() {
-        if (this.props.match.params.category) {
-            axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/" + this.props.match.params.category)
+        let category = this.props.match.params.category;
+        let dressId = this.props.match.params.id;
+        if (category && dressId) {
+            this.setState({ "dressId": dressId });
+            axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
                 .then(response => {
-                    let dressesArray = response.data;
-                        let dressId = parseInt(this.props.match.params.id);
-                        this.props.onInitItems(dressesArray);
-                        if (dressId) {
-                            this.setState({ "dressId": dressId });
-                            for (let index in dressesArray) {
-                                if (dressesArray[index].id === dressId) {
-                                    this.setState({ "dress": dressesArray[index] });
-                                }
-                            }
+                    for (let key in response.data) {
+                        if (key === dressId) {
+                            this.setState({ "dress": { ...response.data[key], id: key } });
                         }
-                        console.log(this.state.dress);
+                    }
                 }).catch(error => {
                     this.props.onInitItems([]);
                 });
@@ -34,31 +32,48 @@ class ViewItemComponent extends Component {
     }
 
     componentDidUpdate(prevProps) {
+        let category = this.props.match.params.category;
+        let dressId = this.props.match.params.id;
         if (this.props.match.params.id !== prevProps.match.params.id) {
-            if (this.props.match.params.category) {
-                axios.get("https://my-json-server.typicode.com/keerthana-karthik/ecommerce/" + this.props.match.params.category)
+            if (category && dressId) {
+                this.setState({ "dressId": dressId });
+                axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
                     .then(response => {
-                        let dressesArray = response.data;
-                        let dressId = parseInt(this.props.match.params.id);
-                        this.props.onInitItems(dressesArray);
-                        if (dressId) {
-                            this.setState({ "dressId": dressId });
-                            for (let index in dressesArray) {
-                                if (dressesArray[index].id === dressId) {
-                                    this.setState({ "dress": dressesArray[index] });
-                                }
+                        for (let key in response.data) {
+                            if (key === dressId) {
+                                this.setState({ "dress": { ...response.data[key], id: key } });
                             }
                         }
-                        console.log(this.state.dress);
                     }).catch(error => {
                         this.props.onInitItems([]);
                     });
             }
         }
     }
+    getIndexInSelectedDressesArray = (dressIdentifier) => {
+        let selectedItemIndex = -1;
+        for (let index in this.props.selectedDressesArray) {
+            if (this.props.selectedDressesArray[index].id === dressIdentifier) {
+                selectedItemIndex = index;
+            }
+        }
+        return selectedItemIndex;
+    }
     render() {
         let dresshtml = null;
         if (this.state.dress && this.state.dress.imgUrl) {
+            let buttonToSelect = null;
+            let selectedItemIndex = this.getIndexInSelectedDressesArray(this.state.dress.id);
+            let selectedItemQuantity = 0;
+            if (selectedItemIndex > -1) {
+                selectedItemQuantity = this.props.selectedDressesArray[selectedItemIndex].selectedQuantity;
+            }
+
+            if (selectedItemIndex > -1 && selectedItemQuantity > 0) {
+                buttonToSelect = <ButtonComponent key={"ButtonComponent" + this.state.dress.id} disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
+            } else {
+                buttonToSelect = <AddToCartComponent key={"AddToCartComponent" + this.state.dress.id} dressId={this.state.dress.id} ></AddToCartComponent>;
+            }
             dresshtml = (
                 <div className={manageItemsClasses.FormWrapper}>
                     <div className={manageItemsClasses.FormImgSection}>
@@ -72,8 +87,11 @@ class ViewItemComponent extends Component {
                             <div className={manageItemsClasses.ItemDetail}>
                                 <PriceComponent key={"PriceComponent" + this.state.dress.id} >{this.state.dress.price}</PriceComponent>
                             </div>
-                            <div className={manageItemsClasses.ItemDetail}>
+                            <div className={[manageItemsClasses.ItemDetail, indexClasses.marginBottom20].join(" ")}>
                                 <div className={manageItemsClasses.ItemDetailDesc}>{this.state.dress.description}</div>
+                            </div>
+                            <div>
+                                {buttonToSelect}
                             </div>
                         </div>
                     </div>
@@ -89,7 +107,8 @@ class ViewItemComponent extends Component {
 }
 const mapStateToProps = state => {
     return {
-        dressesArray: state.dressManageReducer.dresses
+        dressesArray: state.dressManageReducer.dresses,
+        selectedDressesArray: state.orderManageReducer.selectedDresses
     };
 };
 const mapDispatchToProps = dispatch => {

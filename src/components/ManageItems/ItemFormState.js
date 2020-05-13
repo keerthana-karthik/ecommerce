@@ -1,3 +1,10 @@
+
+import { getCategoriesMap } from "../../store/helper";
+const categories = getCategoriesMap().map(category => {
+  return (
+    { value: category.key, displayValue: category.value}
+  )
+});
 const ItemFormState = {
     formData: {
       category: {
@@ -5,20 +12,18 @@ const ItemFormState = {
         elementConfig: {
           options: [
             { value: "null", displayValue: "Select One" },
-            { value: "salwar", displayValue: "Salwar" },
-            { value: "saree", displayValue: "Saree" },
-            { value: "nightwear", displayValue: "Night Wear" }
+            ...categories
           ]
         },
         value: "",
         validation: {},
         valid: true
       },
-      brand: {
+      material: {
         elementType: "input",
         elementConfig: {
           type: "text",
-          placeholder: "Brand"
+          placeholder: "Material"
         },
         value: "",
         validation: {
@@ -27,7 +32,20 @@ const ItemFormState = {
         valid: false,
         touched: false
       },
-      imgurl: {
+      type: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "Type"
+        },
+        value: "",
+        validation: {
+          required: true
+        },
+        valid: false,
+        touched: false
+      },
+      imgUrl: {
         elementType: "input",
         elementConfig: {
           type: "text",
