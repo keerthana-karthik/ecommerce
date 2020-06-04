@@ -1,5 +1,5 @@
 
-import { getCategoriesMap } from "../../store/helper";
+import { getCategoriesMap } from "../../helpers/CatalogHelper";
 const categories = getCategoriesMap().map(category => {
   return (
     { value: category.key, displayValue: category.value}

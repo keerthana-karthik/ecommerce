@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AuthContext from "../../context/AuthContext";
 import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
@@ -46,10 +47,12 @@ class ViewItemComponent extends Component {
                         }
                     }).catch(error => {
                         this.props.onInitItems([]);
-                    });
+                    }
+                );
             }
         }
     }
+    // test
     getIndexInSelectedDressesArray = (dressIdentifier) => {
         let selectedItemIndex = -1;
         for (let index in this.props.selectedDressesArray) {
@@ -93,6 +96,7 @@ class ViewItemComponent extends Component {
                             <div>
                                 {buttonToSelect}
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -101,6 +105,11 @@ class ViewItemComponent extends Component {
         return (
             <div className={manageItemsClasses.ManageItemWrapper}>
                 {dresshtml}
+                <AuthContext.Consumer>
+                    {context => 
+                        context.authenticated ? <p>Authenthicated</p>: <p>Not Authenticated</p>
+                    }
+                </AuthContext.Consumer>
             </div>
         )
     }

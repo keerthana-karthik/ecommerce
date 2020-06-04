@@ -26,7 +26,7 @@ class SideCartComponent extends Component {
         }
         const dresses = dressArray.map(dress => {
             return (
-                <div className={sideCartClasses.cartItemWrapper}>
+                <div className={sideCartClasses.cartItemWrapper} key={"itemwrapper"+dress.id}>
                     <div className={sideCartClasses.cartItem}>
                         <div className={sideCartClasses.cartItemImgWrapper}>
                             <img className={sideCartClasses.cartItemImg} src={dress.imgUrl} />

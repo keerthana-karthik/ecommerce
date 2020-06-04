@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import * as actions from "../../../store/actions/index";
 import ButtonComponent from "../Button/ButtonComponent";
 
 
 class AddToCartComponent extends Component {
-
+// test
     onAddToCart = (dressIdentifier) => {
         let selectedItem = {};
         for (let index in this.props.dressesArray) {
@@ -29,6 +30,9 @@ class AddToCartComponent extends Component {
         );
     }
 }
+AddToCartComponent.propTypes = {
+    dressId: PropTypes.string
+};
 const mapStateToProps = state => {
     return {
         dressesArray: state.dressManageReducer.dresses

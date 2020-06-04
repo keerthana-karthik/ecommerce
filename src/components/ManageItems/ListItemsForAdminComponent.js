@@ -4,12 +4,12 @@ import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../../store/actions/index";
 import { getCategoryDisplayName } from "../../helpers/CatalogHelper";
-import AddToCartComponent from "../Forms/AddToCart/AddToCartComponent";
+import DeleteItemComponent from "./DeleteItemComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import PriceComponent from "../Price/PriceComponent";
 import indexClasses from "../../index.css";
 
-class ListItemsComponent extends Component {
+class ListItemsForAdminComponent extends Component {
     componentDidMount() {
         // this.props.onInitItems(this.props.match.params.id);
         let fetchedDressess = [];
@@ -73,13 +73,7 @@ class ListItemsComponent extends Component {
             if(selectedItemIndex > -1) {
                 selectedItemQuantity = this.props.selectedDressesArray[selectedItemIndex].selectedQuantity;
             }
-            
-            if(selectedItemIndex > -1 && selectedItemQuantity > 0) {
-                buttonToSelect = <ButtonComponent key={"ButtonComponent"+dress.id} disabled={true}>{selectedItemQuantity} In Cart</ButtonComponent>;
-                // buttonToSelect = (<QuantityButtonComponent key={"QuantityButtonComponent"+dress.id} selectedItem={dress} selectedQuantity={1}></QuantityButtonComponent>);
-            }else {
-                buttonToSelect = <AddToCartComponent key={"AddToCartComponent"+dress.id} dressId={dress.id} ></AddToCartComponent>;
-            }
+            buttonToSelect = <DeleteItemComponent key={"DeleteItemComponent"+dress.id} category={dress.category} dressId={dress.id} ></DeleteItemComponent>;
             return (
                 <div key={"div"+dress.id} className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6].join(" ")}>
                     <div className={indexClasses.responsiveContainer}>
@@ -108,7 +102,9 @@ class ListItemsComponent extends Component {
                 <div className={indexClasses.responsiveRow}>
                       {dresses}
                 </div>
+                
             </div>
+            
         );
     }
 }
@@ -125,4 +121,4 @@ const mapDispatchToProps = dispatch => {
         setSelectedItems: (items) => dispatch(actions.setSelectedItems(items))
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(ListItemsComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(ListItemsForAdminComponent);

@@ -29,6 +29,15 @@ export const getCategoryDisplayName = (key) => {
 export const postDataOnServer = (postBody) => {
     axios.post("https://trendy-north.firebaseio.com/" + postBody.category + ".json", postBody)
         .then(response => {
-            console.log(response);
+            this.props.history.push('/items/'+postBody.category);
+            // <Redirect to={'/items/'+postBody.category} />
+        });
+}
+
+export const deleteDataOnServer = (category, itemId) => {
+    axios.delete("https://trendy-north.firebaseio.com/" + category + "/"+itemId+".json")
+        .then(response => {
+            this.props.history.push('/items/'+category);
+            // <Redirect to={'/items/'+category} />
         });
 }

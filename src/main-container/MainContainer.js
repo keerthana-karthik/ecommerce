@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 import axios from "axios";
 import { connect } from 'react-redux';
 import * as actions from "../store/actions/index";
-import { getCategoriesMap } from "../store/helper";
+import { getCategoriesMap } from "../helpers/CatalogHelper";
 import SideCartComponent from "../components/SideCart/SideCartComponent";
 import ListItemsComponent from "../components/ListItems/ListItemsComponent";
+import ListItemsForAdminComponent from "../components/ManageItems/ListItemsForAdminComponent";
 import ViewItemComponent from "../components/ManageItems/ViewItemComponent";
 import ManageItemsComponent from "../components/ManageItems/ManageItemsComponent";
 import CustomFormComponent from "../components/Forms/CustomFormComponent";
@@ -15,7 +17,8 @@ import mainClasses from "./MainContainer.css";
 
 class MainContainer extends Component {
     state= {
-        showFloatingCart: false
+        showFloatingCart: false,
+        authenticated: false
     }
     componentDidMount() {
         let fetchedDressess = [];
@@ -60,7 +63,19 @@ class MainContainer extends Component {
         
         document.getElementById("cartOverlay").style.display = "block";
     }
+    onLoginClick = () => {
+        this.setState((prevState, prevProps) => {
+            return {
+                authenticated : !prevState.authenticated
+            };
+        });
+    }
     render() {
+        let adminLink1, adminLink2 = null;
+        if(this.state.authenticated) {
+            adminLink1 = <NavLink key={"NavLinkaddItemaddItem"} to={"/addItem"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>Add Item</NavLink>
+            adminLink2 = <NavLink key={"NavLinkaddItemmanageItems"} to={"/manageItems"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>ManageItems Items</NavLink>
+        }
         const categories = getCategoriesMap().map(category => {
             return (
                 <NavLink key={"NavLink"+category.key} to={"/items/"+category.key} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>{category.value}</NavLink>
@@ -78,9 +93,10 @@ class MainContainer extends Component {
                     <div className={mainClasses.styleSidebarLinkWrapper}>
                         {categories}    
                     </div>
-                    <NavLink key={"NavLinkaddItem"} to={"/addItem"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>Add Item</NavLink>
+                    {adminLink1}
+                    {adminLink2}
                 </nav>
-
+                {/* Test is data-count is same in large and small screen */}
                 {/* <!-- Top menu on small screens --> */}
                 <header className={[mainClasses.styleBar, indexclasses.positionTop, indexclasses.displayNoneOnLarge, indexclasses.styleBlack, indexclasses.fontSize24].join(" ")}>
                     
@@ -108,6 +124,14 @@ class MainContainer extends Component {
                     <div className={[indexclasses.displayNoneOnLarge, mainClasses.marginTop83].join(" ")}></div>
                     <header className={[indexclasses.displayNoneOnSmall, indexclasses.responsiveContainer, indexclasses.fontSize24].join(" ")}>
                         {/* <p id="pageTitle" className={indexclasses.positionLeft}>Salwars</p> */}
+                        <AuthContext.Provider value={{
+                                authenticated: this.state.authenticated,
+                                login: this.onLoginClick
+                            }}>
+                            <a onClick={this.onLoginClick}>
+                                {(this.state.authenticated)? "LogOut": "LogIn"}
+                            </a>
+                        </AuthContext.Provider>
                         <p className={indexclasses.positionRight}>
                             {/* <i className={[indexclasses.fa, indexclasses.faSearch, indexclasses.marginRight16].join(" ")}></i> */}
                             <span onClick={this.onFloatingCartIconClick} data-count={this.props.totalQuantity} className={indexclasses.faStack}>
@@ -118,14 +142,20 @@ class MainContainer extends Component {
 
                     {/* //   <!-- Image header --> */}
                     <div className={[indexclasses.responsiveContainer].join(" ")}>
+                    <AuthContext.Provider value={{
+                                authenticated: this.state.authenticated,
+                                login: this.onLoginClick
+                            }}>
                         <Switch>
                             <Route path="/addItem" exact component={ManageItemsComponent} />
+                            <Route path="/manageItems" exact component={ListItemsForAdminComponent} />
                             <Route path="/viewItem/:category/:id" exact component={ViewItemComponent} />
                             <Route path={"/items" + '/:id'} exact component={ListItemsComponent} />
                             <Route path="/form" exact component={CustomFormComponent} />
                             <Redirect from="/" to="/items/salwars" />
                             <Route component={PageNotFoundComponent} />
                         </Switch>
+                        </AuthContext.Provider>
                     </div>
                     <SideCartComponent showFloatingCart={this.state.showFloatingCart}></SideCartComponent>
                 </div>

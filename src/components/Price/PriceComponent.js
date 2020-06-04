@@ -7,11 +7,7 @@ const PriceComponent = (props) => {
             <span className={priceClasses.priceSymbol}>₹</span>
             <span className={priceClasses.price}>{props.children}</span>
         </div>
-
     );
-
-
-
 }
 
 export default PriceComponent;

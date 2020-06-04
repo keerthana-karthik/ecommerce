@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import formState from "./ItemFormState";
 import FormsHelper from "../Forms/FormsHelper";
-import { postDataOnServer } from "../../store/helper";
+import { Redirect } from "react-router-dom";
+import axios from "axios";
 import FormElementComponent from "../Forms/FormElement/FormElementComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import manageItemsClasses from "./ManageItemsComponent.css";
@@ -48,7 +49,11 @@ class ManageItemsComponent extends Component {
           "price": formData.price.value,
           "description": formData.description.value
         }
-        postDataOnServer(postBody);
+        // postDataOnServer(postBody);
+        axios.post("https://trendy-north.firebaseio.com/" + postBody.category + ".json", postBody)
+        .then(response => {
+            this.props.history.push('/items/'+postBody.category)
+        });
       };
     render() {
         let formElementsArray = [];

@@ -1,5 +1,5 @@
 import * as Actions from "../actions/actionTypes";
-import { updateStateObject } from "../helper";
+import { updateStateObject } from "../../helpers/CatalogHelper";
 const initialState = {
     dresses: []
 }

@@ -9,7 +9,7 @@ class QuantityButtonComponent extends Component {
     quantityDisplayValue: this.props.selectedItem.selectedQuantity
   }
   render() {
-
+   // test quantityDisplay after 3 onIncrementBtn and 1 onDecrementBtn
     const onDecrementBtn = (event) => {
       let newQuantityDisplayValue = this.state.quantityDisplayValue - 1;
       this.setState({quantityDisplayValue : newQuantityDisplayValue});
@@ -33,7 +33,7 @@ class QuantityButtonComponent extends Component {
           -
         </button>
         <div>
-          <input id="quantityDisplay" type="number" className={classes.quantityDisplay} value={this.state.quantityDisplayValue} maxlength="1" />
+          <input readOnly id="quantityDisplay" type="number" className={classes.quantityDisplay} value={this.state.quantityDisplayValue} maxLength="1" />
         </div>
         <button className={classes.incrementBtn} onClick={onIncrementBtn}>
           +

@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import indexclasses from "../../../index.css";
 import elementclasses from "./FormElementComponent.css";
 
 const FormElementComponent = props => {
+  // useEffect(() => {
+  //   console.log("Renders only when props.value updates ");
+  // }, [props.value]);
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("Cleanup on component unmount");
+  //   }
+  // }, []);
   let formElement = null;
   const inputClasses = [elementclasses.InputElement];
 
