@@ -107,7 +107,7 @@ class ViewItemComponent extends Component {
                 {dresshtml}
                 <AuthContext.Consumer>
                     {context => 
-                        context.authenticated ? <p>Authenthicated</p>: <p>Not Authenticated</p>
+                        context.authenticated ? <p>Logged In</p>: null
                     }
                 </AuthContext.Consumer>
             </div>

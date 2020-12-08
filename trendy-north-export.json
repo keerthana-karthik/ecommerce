@@ -1,0 +1,308 @@
+{
+  "bridal" : {
+    "-MNvQWTw6oIw_9TcgwBD" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1536077281021-3f585d4e3e9e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTR8fGJyaWRhbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    },
+    "-MNvQWTw6oIw_9TcgwBE" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1598380309734-8e966b68884c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjI2fHxicmlkYWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    },
+    "-MNvQWTw6oIw_9TcgwBL" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1517962237390-4e9c3e2b5f90?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGJyaWRhbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    },
+    "-MNvQWTw6oIw_9TcgwBQ" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1571908598047-9b0049221e4e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzJ8fGJyaWRhbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    },
+    "-MNvQWTw6oIw_9TcgwBR" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1596744743105-b1e229d13036?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzM4fHxicmlkYWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    },
+    "-MNvQWTw6oIw_9TcgwBW" : {
+      "category" : "bridal",
+      "description" : "Wedding Dress Beach Bridal Dresses Lace Wedding Gown A Line Bride Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1595231712612-754e8fe9d29b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTR8fGJyaWRhbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Chiffon",
+      "price" : "110",
+      "type" : "Bridal Gown"
+    }
+  },
+  "dress" : {
+    "-MNvIAAYrnrCn5AUWPwD" : {
+      "category" : "dress",
+      "description" : "Women Casual 3/4th Sleeve Dresses",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/v1607323299/photo-1601653233006-5c9fd30eab12_bs0h5k.jpg",
+      "material" : "Elastic closure",
+      "price" : "26",
+      "type" : "Loose Dress"
+    },
+    "-MNvIAAYrnrCn5AUWPwV" : {
+      "category" : "dress",
+      "description" : "Women Casual 3/4th Sleeve Dresses",
+      "imgUrl" : "https://images.unsplash.com/photo-1596783074918-c84cb06531ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJlc3Nlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Elastic closure",
+      "price" : "26",
+      "type" : "Loose Dress"
+    },
+    "-MNvIiNVoJndS9_PibvB" : {
+      "category" : "dress",
+      "description" : "Milumia Women's Elegant Frilled Long Sleeve",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/v1607323470/photo-1542295669297-4d352b042bca_sycpap.jpg",
+      "material" : "Polyester",
+      "price" : "35",
+      "type" : "Pleated Fit and Flare Dress"
+    },
+    "-MNvIiNVoJndS9_PibvD" : {
+      "category" : "dress",
+      "description" : "Milumia Women's Elegant Frilled Long Sleeve",
+      "imgUrl" : "https://images.unsplash.com/photo-1592301945141-e2074718b711?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fGRyZXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Polyester",
+      "price" : "35",
+      "type" : "Pleated Fit and Flare Dress"
+    },
+    "-MNvIiNVoJndS9_PibvF" : {
+      "category" : "dress",
+      "description" : "Milumia Women's Elegant Frilled Long Sleeve",
+      "imgUrl" : "https://images.unsplash.com/photo-1602092078592-784556bba6c4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzB8fGRyZXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Polyester",
+      "price" : "35",
+      "type" : "Pleated Fit and Flare Dress"
+    },
+    "-MNvIiNVoJndS9_PibvV" : {
+      "category" : "dress",
+      "description" : "Milumia Women's Elegant Frilled Long Sleeve",
+      "imgUrl" : "https://images.unsplash.com/photo-1602414448057-e4357463cb3a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGRyZXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Polyester",
+      "price" : "35",
+      "type" : "Pleated Fit and Flare Dress"
+    },
+    "-MNvJM2RmQaRY-7LPgT1" : {
+      "category" : "dress",
+      "description" : "Women's 50s 60s Vintage Sleeveless V-Neck Cocktail Swing Dress",
+      "imgUrl" : "https://images.unsplash.com/photo-1596783047904-4000addd05cd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8ZHJlc3Nlc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "90%Polyester+10%Spandex",
+      "price" : "28",
+      "type" : "Cocktail Swing Dress"
+    }
+  },
+  "kurtis" : {
+    "-M7525myOZ_HJaakHq7V" : {
+      "category" : "kurtis",
+      "description" : "Sizes in Palazzo - Free Size. \nLength of Kurtis : 48 - 52 \nLength of Palazzo - 36-38. \nStyle of Kurtis : Umbrella Frocks",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_floral_white_tj3rpn.jpg",
+      "material" : "Soft Rayon Cotton",
+      "price" : "899",
+      "type" : "Kurtis Plazzo Set"
+    },
+    "-M752LdJ0ufXLZNam9mi" : {
+      "category" : "kurtis",
+      "description" : "Sizes in Palazzo - Free Size. \nLength of Kurtis : 48 - 52 \nLength of Palazzo - 36-38. \nStyle of Kurtis : Umbrella Frocks",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_yellow_red_hiv32b.jpg",
+      "material" : "Soft Rayon Cotton",
+      "price" : "899",
+      "type" : "Kurtis Plazzo Set"
+    },
+    "-M752RY3VuqgPneUigM6" : {
+      "category" : "kurtis",
+      "description" : "Sizes in Palazzo - Free Size. \nLength of Kurtis : 48 - 52 \nLength of Palazzo - 36-38. \nStyle of Kurtis : Umbrella Frocks",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_grey_yellow_uqxlov.jpg",
+      "material" : "Soft Rayon Cotton",
+      "price" : "899",
+      "type" : "Kurtis Plazzo Set"
+    },
+    "-M752VWufZWpYCvABUqn" : {
+      "category" : "kurtis",
+      "description" : "Sizes in Palazzo - Free Size. \nLength of Kurtis : 48 - 52 \nLength of Palazzo - 36-38. \nStyle of Kurtis : Umbrella Frocks",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_drkblue_pink_opamj0.jpg",
+      "material" : "Soft Rayon Cotton",
+      "price" : "899",
+      "type" : "Kurtis Plazzo Set"
+    },
+    "-M752edxs1Of2HUoKe8u" : {
+      "category" : "kurtis",
+      "description" : "Sizes in Palazzo - Free Size. \nLength of Kurtis : 48 - 52 \nLength of Palazzo - 36-38. \nStyle of Kurtis : Umbrella Frocks",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1588648217/Kurtis_Plazzo_Set_blue_green_btlrfv.jpg",
+      "material" : "Soft Rayon Cotton",
+      "price" : "899",
+      "type" : "Kurtis Plazzo Set"
+    }
+  },
+  "pants" : {
+    "-MNvObzUYilzbHzRJgtu" : {
+      "category" : "pants",
+      "description" : "Brownish Grey Long Pants",
+      "imgUrl" : "https://images.unsplash.com/photo-1580968744774-74b3888b402d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE0fHxwYW50c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Demin",
+      "price" : "27",
+      "type" : "Formal"
+    }
+  },
+  "salwar" : {
+    "-MNvR-JleLkzJPAg6CJx" : {
+      "category" : "salwar",
+      "description" : "Indian Pakistani Dresses for Women Palazzo Style Embroidered Salwar Kameez Suit",
+      "imgUrl" : "https://images.unsplash.com/photo-1597983073512-90bd150e19f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHNhbHdhcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Faux Georgette",
+      "price" : "34",
+      "type" : "Straight Salwar"
+    }
+  },
+  "salwars" : {
+    "-M75JQM-Ebdkp3qoA4HJ" : {
+      "category" : "salwars",
+      "description" : "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta.",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1589053580/Elegant_Suits2_fxdosg.jpg",
+      "material" : "Cotton",
+      "price" : "2125",
+      "type" : "Elegant Suits"
+    },
+    "-M75JTvP-zeTz_oL4_40" : {
+      "category" : "salwars",
+      "description" : "Digital Printed with Mirror Work. Pure Bemberg Chiffon Digital Printed Dupatta.",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/c_fill,h_500,w_400/v1589053581/Elegant_Suits3_cvocct.jpg",
+      "material" : "Cotton",
+      "price" : "2125",
+      "type" : "Elegant Suits"
+    }
+  },
+  "shirts" : {
+    "-MNvKlVJ1hmZkEsPspaE" : {
+      "category" : "shirts",
+      "description" : "Men's Dress Shirt Regular Fit Non Iron Herringbone",
+      "imgUrl" : "https://images.unsplash.com/photo-1591142069892-d18159244f72?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njh8fHNoaXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "14",
+      "type" : "Plain"
+    },
+    "-MNvKlVJ1hmZkEsPspaQ" : {
+      "category" : "shirts",
+      "description" : "Men's Dress Shirt Regular Fit Non Iron Herringbone",
+      "imgUrl" : "https://images.unsplash.com/photo-1564315254352-f33b576102a4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fHNoaXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "14",
+      "type" : "Plain"
+    },
+    "-MNvMNQPhKiQCPVOjaNY" : {
+      "category" : "shirts",
+      "description" : "Versatile and always in style, this classic oxford shirt is a wardrobe essential",
+      "imgUrl" : "https://images.unsplash.com/photo-1590530606880-74aea683453e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE4fHxzaGlydHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "40",
+      "type" : "Check"
+    },
+    "-MNvMNQPhKiQCPVOjaRV" : {
+      "category" : "shirts",
+      "description" : "Men's Dress Shirt Regular Fit Non Iron Herringbone",
+      "imgUrl" : "https://images.unsplash.com/photo-1550091346-1e823a403e60?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nzd8fHNoaXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "14",
+      "type" : "Plain"
+    },
+    "-MNvMNQPhKiQCPVOjaWO" : {
+      "category" : "shirts",
+      "description" : "Versatile and always in style, this classic oxford shirt is a wardrobe essential",
+      "imgUrl" : "https://images.unsplash.com/photo-1605794432120-f4bb5dc9067d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTJ8fHNoaXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "40",
+      "type" : "Check"
+    }
+  },
+  "skirts" : {
+    "-MNvNQNTqTYUSHKkNmf9" : {
+      "category" : "skirts",
+      "description" : "Mid waist, above knee, button closure, A-line, short pleated skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1593678655200-fd978eb33c70?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60\\\"",
+      "material" : "Cotton",
+      "price" : "25",
+      "type" : "Short"
+    },
+    "-MNvNQNTqTYUSHKkNmfb" : {
+      "category" : "skirts",
+      "description" : "Mid waist, above knee, button closure, A-line, short pleated skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1585221386840-c43db2a27f88?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "25",
+      "type" : "Short"
+    },
+    "-MNvNQNTqTYUSHKkNmfc" : {
+      "category" : "skirts",
+      "description" : "Mid waist, above knee, button closure, A-line, short pleated skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1551863081-8279c56f17e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "25",
+      "type" : "Short"
+    },
+    "-MNvNQNTqTYUSHKkNmfz" : {
+      "category" : "skirts",
+      "description" : "Mid waist, above knee, button closure, A-line, short pleated skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1553129797-9c0cedf9978b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Cotton",
+      "price" : "25",
+      "type" : "Short"
+    },
+    "-MNvNqdO6rkmWs6KVhof" : {
+      "category" : "skirts",
+      "description" : "Women's Basic Versatile Stretchy Flared Casual Mini Skater Skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1578006711491-890dec58badb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Skater",
+      "price" : "27",
+      "type" : "Stretchy"
+    },
+    "-MNvNqdO6rkmWs6KVhos" : {
+      "category" : "skirts",
+      "description" : "Women's Basic Versatile Stretchy Flared Casual Mini Skater Skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1603287976303-8f0323b184d5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDF8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Skater",
+      "price" : "27",
+      "type" : "Stretchy"
+    },
+    "-MNvNqdO6rkmWs6KVhov" : {
+      "category" : "skirts",
+      "description" : "Women's Basic Versatile Stretchy Flared Casual Mini Skater Skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1585714739367-a298fee59845?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Skater",
+      "price" : "27",
+      "type" : "Stretchy"
+    },
+    "-MNvNqdO6rkmWs6KVhox" : {
+      "category" : "skirts",
+      "description" : "Women's Basic Versatile Stretchy Flared Casual Mini Skater Skirt",
+      "imgUrl" : "https://images.unsplash.com/photo-1588586392648-592f4833c6b8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fHNraXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      "material" : "Skater",
+      "price" : "27",
+      "type" : "Stretchy"
+    }
+  },
+  "sleepwears" : {
+    "-M75KlMnixP3fKq9H1nu" : {
+      "category" : "sleepwears",
+      "description" : "Only Few Sizes",
+      "imgUrl" : "https://res.cloudinary.com/imagesforwebpage/image/upload/v1589244072/SW1_wyp5z4.jpg",
+      "material" : "Crepe",
+      "price" : "1250",
+      "type" : "3. Piece Set"
+    }
+  }
+}

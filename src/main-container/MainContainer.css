@@ -34,7 +34,7 @@ section {
 .bodyWrapper {
     margin-left: -8px;;
     margin-top: -8px;
-    max-width: 1200px;
+    max-width: 1800px;
 }
 
 .marginTop83 {
@@ -48,7 +48,7 @@ section {
     position: fixed !important;
     overflow: auto;
     z-index: 3;
-    width: 250px;
+    width: 210px;
     position: fixed;
     top: 0;
 }
@@ -129,13 +129,13 @@ section {
 .styleBarIcons i:hover {
     border: 1px solid white;
 }
-.styleBarItem:hover {
+/* .styleBarItem:hover {
     color: #000 !important;
-    background-color: #ccc !important
-}
+    background-color: #00bcd436 !important
+} */
 .styleBarItem:active,  .styleBarItem.active{
     color: #000 !important;
-    background-color: #ccc !important
+    background-color: #00bcd436 !important
 }
 
 .styleBarBlock.styleCenter .styleBarItem {
@@ -150,6 +150,15 @@ section {
     color: inherit !important;
     background-color: inherit !important;
     cursor: default !important;
+}
+.loginText {
+    font-size: 12px;
+    background: #00bcd436;
+    padding: 0.5em;
+    margin: 1em;
+    margin-top: 2em;
+    cursor: pointer;
+    border: 1px solid blue;
 }
 @media (min-width:993px) {
     .w3-modal-content {

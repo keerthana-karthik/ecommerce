@@ -8,6 +8,7 @@ import DeleteItemComponent from "./DeleteItemComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import PriceComponent from "../Price/PriceComponent";
 import indexClasses from "../../index.css";
+import manageItemClasses from "./ManageItemsComponent.css";
 
 class ListItemsForAdminComponent extends Component {
     componentDidMount() {
@@ -87,7 +88,7 @@ class ListItemsForAdminComponent extends Component {
                             </div>
                         </div>
                         <h6 className={indexClasses.marginBottom20}>
-                            <div className={indexClasses.marginBottom5}>{dress.type} - {dress.material}</div>
+                            <div className={[indexClasses.marginBottom5, manageItemClasses.ItemTitle].join(" ")}>{dress.type} - {dress.material}</div>
                             <PriceComponent key={"PriceComponent"+dress.id} >{dress.price}</PriceComponent>
                         </h6>
                     </div>

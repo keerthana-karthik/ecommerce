@@ -6,12 +6,13 @@ export const updateStateObject = (oldStateObject, updatedProperties) => {
     };
 }
 const categoryDisplayNameMap = [
-    { "key": "salwars", "value": "Salwar Materials" },
-    { "key": "kurtis", "value": "Kurtis Set" },
-    { "key": "sleepwears", "value": "Sleepwears" },
-    { "key": "trendyoutfits", "value": "Trendy Outfits" },
-    { "key": "bedsheets", "value": "Bed Sheets" },
-    { "key": "accessories", "value": "Accessories" }]
+    { "key": "dress", "value": "Dresses" },
+    { "key": "shirts", "value": "Shirts" },
+    { "key": "skirts", "value": "Skirts" },
+    { "key": "pants", "value": "Pants" },
+    { "key": "bridal", "value": "Bridal" },
+    { "key": "kurtis", "value": "Kurtis" },
+    { "key": "salwar", "value": "Salwar" }]
     ;
 export const getCategoriesMap = () => {
     return categoryDisplayNameMap;

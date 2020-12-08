@@ -22,7 +22,7 @@ class MainContainer extends Component {
     }
     componentDidMount() {
         let fetchedDressess = [];
-        let category = "salwars";
+        let category = "dresses";
 
     axios.get("https://trendy-north.firebaseio.com/" + category + ".json")
         .then(res => {
@@ -74,7 +74,8 @@ class MainContainer extends Component {
         let adminLink1, adminLink2 = null;
         if(this.state.authenticated) {
             adminLink1 = <NavLink key={"NavLinkaddItemaddItem"} to={"/addItem"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>Add Item</NavLink>
-            adminLink2 = <NavLink key={"NavLinkaddItemmanageItems"} to={"/manageItems"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>ManageItems Items</NavLink>
+            // adminLink2 = <NavLink key={"NavLinkaddItemmanageItems"} to={"/manageItems"} onClick={this.onNavLinkClick} className={mainClasses.styleBarItem} activeClassName={mainClasses.active}>ManageItems Items</NavLink>
+        
         }
         const categories = getCategoriesMap().map(category => {
             return (
@@ -95,6 +96,14 @@ class MainContainer extends Component {
                     </div>
                     {adminLink1}
                     {adminLink2}
+                    <AuthContext.Provider value={{
+                        authenticated: this.state.authenticated,
+                        login: this.onLoginClick
+                    }}>
+                    <a className={[mainClasses.styleBarItem, indexclasses.displayNoneOnSmall].join(" ")} onClick={this.onLoginClick}>
+                        {(this.state.authenticated)? "Log Out": "Dummy Sign In"}
+                    </a>
+                </AuthContext.Provider>
                 </nav>
                 {/* Test is data-count is same in large and small screen */}
                 {/* <!-- Top menu on small screens --> */}
@@ -124,14 +133,7 @@ class MainContainer extends Component {
                     <div className={[indexclasses.displayNoneOnLarge, mainClasses.marginTop83].join(" ")}></div>
                     <header className={[indexclasses.displayNoneOnSmall, indexclasses.responsiveContainer, indexclasses.fontSize24].join(" ")}>
                         {/* <p id="pageTitle" className={indexclasses.positionLeft}>Salwars</p> */}
-                        <AuthContext.Provider value={{
-                                authenticated: this.state.authenticated,
-                                login: this.onLoginClick
-                            }}>
-                            <a onClick={this.onLoginClick}>
-                                {(this.state.authenticated)? "LogOut": "LogIn"}
-                            </a>
-                        </AuthContext.Provider>
+                        
                         <p className={indexclasses.positionRight}>
                             {/* <i className={[indexclasses.fa, indexclasses.faSearch, indexclasses.marginRight16].join(" ")}></i> */}
                             <span onClick={this.onFloatingCartIconClick} data-count={this.props.totalQuantity} className={indexclasses.faStack}>
@@ -152,7 +154,7 @@ class MainContainer extends Component {
                             <Route path="/viewItem/:category/:id" exact component={ViewItemComponent} />
                             <Route path={"/items" + '/:id'} exact component={ListItemsComponent} />
                             <Route path="/form" exact component={CustomFormComponent} />
-                            <Redirect from="/" to="/items/salwars" />
+                            <Redirect from="/" to="/items/dresses" />
                             <Route component={PageNotFoundComponent} />
                         </Switch>
                         </AuthContext.Provider>

@@ -8,6 +8,7 @@ import AddToCartComponent from "../Forms/AddToCart/AddToCartComponent";
 import ButtonComponent from "../Forms/Button/ButtonComponent";
 import PriceComponent from "../Price/PriceComponent";
 import indexClasses from "../../index.css";
+import manageItemClasses from "../ManageItems/ManageItemsComponent.css";
 
 class ListItemsComponent extends Component {
     componentDidMount() {
@@ -81,8 +82,8 @@ class ListItemsComponent extends Component {
                 buttonToSelect = <AddToCartComponent key={"AddToCartComponent"+dress.id} dressId={dress.id} ></AddToCartComponent>;
             }
             return (
-                <div key={"div"+dress.id} className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6].join(" ")}>
-                    <div className={indexClasses.responsiveContainer}>
+                <div key={"div"+dress.id} className={[indexClasses.responsiveCol ,indexClasses.l3, indexClasses.s6, manageItemClasses.ItemOuterWrapper].join(" ")}>
+                    <div className={[indexClasses.responsiveContainer, manageItemClasses.ItemWrapper].join(" ")}>
                         <div className={indexClasses.positionDisplayContainer}>
                             <Link key={"Link"+dress.id} to={{"pathname":"/viewItem/"+dress.category+"/"+dress.id}} >
                                 <img src={dress.imgUrl} alt="Dress image" className={indexClasses.width100}></img>
@@ -93,7 +94,7 @@ class ListItemsComponent extends Component {
                             </div>
                         </div>
                         <h6 className={indexClasses.marginBottom20}>
-                            <div className={indexClasses.marginBottom5}>{dress.type} - {dress.material}</div>
+                            <div className={[indexClasses.marginBottom5, manageItemClasses.ItemTitle].join(" ")}>{dress.type} - {dress.material}</div>
                             <PriceComponent key={"PriceComponent"+dress.id} >{dress.price}</PriceComponent>
                         </h6>
                     </div>
