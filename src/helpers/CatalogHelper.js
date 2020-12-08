@@ -6,7 +6,7 @@ export const updateStateObject = (oldStateObject, updatedProperties) => {
     };
 }
 const categoryDisplayNameMap = [
-    { "key": "dress", "value": "Dresses" },
+    { "key": "dresses", "value": "Dresses" },
     { "key": "shirts", "value": "Shirts" },
     { "key": "skirts", "value": "Skirts" },
     { "key": "pants", "value": "Pants" },
