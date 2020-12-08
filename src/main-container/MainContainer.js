@@ -154,7 +154,7 @@ class MainContainer extends Component {
                             <Route path="/viewItem/:category/:id" exact component={ViewItemComponent} />
                             <Route path={"/items" + '/:id'} exact component={ListItemsComponent} />
                             <Route path="/form" exact component={CustomFormComponent} />
-                            <Redirect from="/" to="/items/dresses" />
+                            <Redirect from="/" to="/items/dress" />
                             <Route component={PageNotFoundComponent} />
                         </Switch>
                         </AuthContext.Provider>
