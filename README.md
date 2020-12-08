@@ -1,5 +1,6 @@
 ECommerce
 ===================
+An ecommerce project template using react with neat sidebar for menu and sidecart along with responsive product listing. A product detail view and simple add to side cart is implemented using redux for state management.
 Covering Props, State, List, Conditions, Routing, Form and Custom Form Elements, Redux.
 [Demo](https://trendy-north.web.app/)
 
